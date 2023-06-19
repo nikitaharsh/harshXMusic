@@ -83,13 +83,13 @@ async def gen_thumb(videoid, user_id):
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
         bg = Image.open(f"AnonX/assets/anonx.png")
-        image1 = changeImageSize(1280, 720, youtube)
+        image1 = changeImageSize(1280, 120, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(20))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
 
-        image3 = changeImageSize(1280, 720, bg)
+        image3 = changeImageSize(1280, 120, bg)
         image5 = image3.convert("RGBA")
         Image.alpha_composite(background, image5).save(f"cache/temp{videoid}.png")
 
@@ -113,7 +113,7 @@ async def gen_thumb(videoid, user_id):
         width = int((1280 - 365) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 138), mask=logo)
-        background.paste(x, (710, 427), mask=x)
+        background.paste(x, (110, 427), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)

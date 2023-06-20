@@ -206,7 +206,7 @@ async def gen_qthumb(videoid, user_id):
                     await f.close()
 
         try:
-            wxyz = await app.get_profile_photos(chat_id)
+            wxyz = await app.get_profile_photos(user_id)
             wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
         except:
             hehe = await app.get_profile_photos(app.id)

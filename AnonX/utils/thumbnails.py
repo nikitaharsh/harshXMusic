@@ -66,7 +66,7 @@ async def gen_thumb(videoid, user_id):
                     await f.close()
 
         try:
-            wxyz = await app.get_profile_photos(chat_id)
+            wxyz = await app.get_profile_photos(user_id)
             wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
         except:
             hehe = await app.get_profile_photos(app.id)
@@ -112,8 +112,8 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((1, 1), Image.ANTIALIAS)
         width = int((1280 - 1) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 2, 138), mask=logo)
-        background.paste(x, (720, 330), mask=x)
+        background.paste(logo, (width + 2, 550), mask=logo)
+        background.paste(x, (720, 730), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
@@ -252,8 +252,8 @@ async def gen_qthumb(videoid, user_id):
         logo.thumbnail((1, 1), Image.ANTIALIAS)
         width = int((1280 - 1) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 2, 138), mask=logo)
-        background.paste(x, (710, 330), mask=x)
+        background.paste(logo, (width + 2, 550), mask=logo)
+        background.paste(x, (710, 730), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)

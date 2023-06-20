@@ -117,10 +117,10 @@ async def gen_thumb(videoid, user_id):
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("AnonX/assets/font2.ttf", 450)
-        ImageFont.truetype("AnonX/assets/font2.ttf", 700)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 300)
-        ImageFont.truetype("AnonX/assets/font.ttf", 300)
+        font = ImageFont.truetype("AnonX/assets/font2.ttf", 1)
+        ImageFont.truetype("AnonX/assets/font2.ttf", 11)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 1)
+        ImageFont.truetype("AnonX/assets/font.ttf", 1)
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
@@ -134,7 +134,7 @@ async def gen_thumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 530),
+                    ((1280 - text_w) / 2, 1),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -144,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 580),
+                    ((1280 - text_w) / 2, 1),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -155,7 +155,7 @@ async def gen_thumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - text_w) / 2, 660),
+            ((1280 - text_w) / 2, 1),
             f"Duration: {duration} Mins",
             fill="white",
             font=arial,
@@ -257,10 +257,10 @@ async def gen_qthumb(videoid, user_id):
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("AnonX/assets/font2.ttf", 450)
-        ImageFont.truetype("AnonX/assets/font2.ttf", 700)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 300)
-        ImageFont.truetype("AnonX/assets/font.ttf", 300)
+        font = ImageFont.truetype("AnonX/assets/font2.ttf", 1)
+        ImageFont.truetype("AnonX/assets/font2.ttf", 1)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 1)
+        ImageFont.truetype("AnonX/assets/font.ttf", 1)
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
@@ -274,7 +274,7 @@ async def gen_qthumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 530),
+                    ((1280 - text_w) / 2, 1),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -284,7 +284,7 @@ async def gen_qthumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 580),
+                    ((1280 - text_w) / 2, 1),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -295,7 +295,7 @@ async def gen_qthumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - text_w) / 2, 660),
+            ((1280 - text_w) / 2, 1),
             f"Duration: {duration} Mins",
             fill="white",
             font=arial,

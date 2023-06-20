@@ -85,7 +85,7 @@ async def gen_thumb(videoid, user_id):
         bg = Image.open(f"AnonX/assets/anonx.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
-        background = image2.filter(filter=ImageFilter.BoxBlur(30))
+        background = image2.filter(filter=ImageFilter.BoxBlur(3))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
 
@@ -113,14 +113,14 @@ async def gen_thumb(videoid, user_id):
         width = int((1280 - 1) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 1380), mask=logo)
-        background.paste(x, (710, 427), mask=x)
+        background.paste(x, (710, 4270), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
-        ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 30)
-        ImageFont.truetype("AnonX/assets/font.ttf", 30)
+        font = ImageFont.truetype("AnonX/assets/font2.ttf", 450)
+        ImageFont.truetype("AnonX/assets/font2.ttf", 700)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 300)
+        ImageFont.truetype("AnonX/assets/font.ttf", 300)
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
@@ -225,7 +225,7 @@ async def gen_qthumb(videoid, user_id):
         bg = Image.open(f"AnonX/assets/anonx.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
-        background = image2.filter(filter=ImageFilter.BoxBlur(30))
+        background = image2.filter(filter=ImageFilter.BoxBlur(3))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
 
@@ -253,14 +253,14 @@ async def gen_qthumb(videoid, user_id):
         width = int((1280 - 1) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 1380), mask=logo)
-        background.paste(x, (710, 427), mask=x)
+        background.paste(x, (710, 4270), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
-        ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 30)
-        ImageFont.truetype("AnonX/assets/font.ttf", 30)
+        font = ImageFont.truetype("AnonX/assets/font2.ttf", 450)
+        ImageFont.truetype("AnonX/assets/font2.ttf", 700)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 300)
+        ImageFont.truetype("AnonX/assets/font.ttf", 300)
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(

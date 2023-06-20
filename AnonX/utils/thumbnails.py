@@ -109,10 +109,10 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((365, 365), Image.ANTIALIAS)
-        width = int((1280 - 365) / 2)
+        logo.thumbnail((1, 1), Image.ANTIALIAS)
+        width = int((1280 - 1) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 2, 138), mask=logo)
+        background.paste(logo, (width + 2, 1380), mask=logo)
         background.paste(x, (710, 427), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
@@ -249,10 +249,10 @@ async def gen_qthumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((365, 365), Image.ANTIALIAS)
-        width = int((1280 - 365) / 2)
+        logo.thumbnail((1, 1), Image.ANTIALIAS)
+        width = int((1280 - 1) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 2, 138), mask=logo)
+        background.paste(logo, (width + 2, 1380), mask=logo)
         background.paste(x, (710, 427), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 

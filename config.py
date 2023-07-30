@@ -10,7 +10,7 @@ load_dotenv()
 API_ID = int(getenv("API_ID", "18476081"))
 API_HASH = getenv("API_HASH", "23890e56461cadc753694bd8dfaf0227")
 
-BOT_TOKEN = getenv("BOT_TOKEN", "6166547031:AAH-Ay3s2LVnsAEi0CLSHPIICGEjcPpU36E")
+BOT_TOKEN = getenv("BOT_TOKEN", "6365317346:AAFW3E8uvbhc0wYlrJw0w3uvCTrKfQnJYN4")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://userbot:userbot@cluster0.iweqz.mongodb.net/test?retryWrites=true&w=majority ")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001846148825"))
@@ -21,7 +21,7 @@ OWNER_ID = list(map(int, getenv("OWNER_ID", "6387600212").split()))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/nikitaharsh/harshXMusic")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/nikitaharsh/harsh")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
